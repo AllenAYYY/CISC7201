@@ -297,7 +297,7 @@ def find_k_x_expensive(driver,keyword="Play",x=3):
 
 
 
-def process_task1(driver,keywrod = "Sony Playstation 4 Pro White Version"):
+def process_task1(driver,keyword = "Sony Playstation 4 Pro White Version"):
     '''
     :description: 完成登录->进入商品页面->商品添加到购物车->继续结账->填写信息->下单->填写验证码 过程
     :param driver: 挂载的driver
@@ -305,7 +305,8 @@ def process_task1(driver,keywrod = "Sony Playstation 4 Pro White Version"):
     :return: driver
     '''
     driver = login(driver, USERNAME, PASSWD)
-    driver = search(driver, keywrod)
+    name = input("请输入关键字：") or keyword
+    driver = search(driver, name)
     driver = add_to_car(driver)
     driver = check(driver)
     driver.get(URL_HOME)
@@ -320,7 +321,9 @@ def process_task2(driver,keyword="Play",x=3):
     :return: 商品列表，形如[{name:'xx',price:'xx',description:'xx'},{name:'yy',price:'yy',description:'yy'}]
     '''
     #driver = login(driver, USERNAME, PASSWD)
-    result = find_k_x_expensive(driver,keyword,x)
+    name = input("请输入关键字：") or keyword
+    number = int(input("请输入数量：")) or x
+    result = find_k_x_expensive(driver,name,number)
     driver.get(URL_HOME)
     return result
 
