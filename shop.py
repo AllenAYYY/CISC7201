@@ -12,9 +12,13 @@ from selenium.common import WebDriverException
 #import
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support import expected_conditions as EC
 import base64
 import csv
 import time
+
+from selenium.webdriver.support.wait import WebDriverWait
+
 import driver
 import ddddocr
 
@@ -354,6 +358,7 @@ def process_task4(driver,keyword="GPS"):
     '''
     flag = 0
     page_links = driver.find_elements(By.XPATH,"//*[@id='root']/main/div/ul/li/a")
+    wait = WebDriverWait(driver, 10)
     links = []
     for page in page_links:
         link = page.get_attribute("href")
@@ -365,7 +370,7 @@ def process_task4(driver,keyword="GPS"):
             products = []
             driver.get(page_link)
             break_flag = 0
-            product_links = driver.find_element(By.XPATH, "//*[@id='root']/main/div/div[2]")
+            product_links = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='root']/main/div/div[2]")))
             #wait = WebDriverWait(driver, 10)
             #product_links = wait.until(EC.presence_of_element_located((By.XPATH, "//div[@id='product_links']")))
             product_name = product_links.find_elements(By.XPATH, "./div/div/div/a/div")
@@ -392,16 +397,18 @@ def process_task4(driver,keyword="GPS"):
                     break
             if (flag == 1):
                 break
+        if(flag == 0):
+            print("商品未更新！")
 
 
 
 if __name__ == '__main__':
     driver = driver.diriver_build()
     driver = login(driver,USERNAME,PASSWD)
-    driver = process_task1(driver)
-    results = process_task2(driver)
-    driver = process_task3(driver,results)
-    #process_task4(driver,"CISC7201")
+    #driver = process_task1(driver)
+    #results = process_task2(driver)
+    #driver = process_task3(driver,results)
+    process_task4(driver,"CISC7201")
     #process_task4(driver, "knell")
 
 
