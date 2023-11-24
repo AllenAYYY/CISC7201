@@ -1,0 +1,729 @@
+<p><strong>题目1：</strong> 在磁盘上建立文件系统的过程通常称为 </p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>格式化</span></strong></p>
+<p><strong>选项 B：</strong> 封装</p>
+<p><strong>选项 C：</strong> 分区</p>
+<p><strong>选项 D：</strong> RAID</p>
+<p><strong>解析：</strong> 在磁盘上建立文件系统的过程通常称为格式化；封装，即隐藏对象的属性和实现细节，仅对外公开接口，控制在程序中属性的读和修改的访问级别；RAID一般指磁盘阵列；分区是指将硬盘的整体存储空间划分成多个独立的区域</p>
+<p><strong>题目2：</strong> 在RAID5和RAID6中，允许现故障的磁盘数量分别是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 3,2</p>
+<p><strong>选项 B：</strong> 2,1</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>1,2</span></strong></p>
+<p><strong>选项 D：</strong> 2,3</p>
+<p><strong>解析：</strong> RAID5允许同时出现一个磁盘故障。RAID5使用异或运算来校验数据，使得在一块磁盘发生故障时，可以通过其他磁盘来恢复数据。但是，如果两块磁盘同时发生故障，则无法恢复数据。
+RAID6允许同时出现两个磁盘故障。RAID6使用更复杂的校验算法，使得在两块磁盘发生故障时，仍然可以通过其他磁盘来恢复数据。但是，如果三块磁盘同时发生故障，则无法恢复数据。</p>
+<p><strong>题目3：</strong> 在Openstack解决方案中，负载提供持久化块存储的模块是哪一个?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> Swift</p>
+<p><strong>选项 B：</strong> Glance</p>
+<p><strong>选项 C：</strong> Nova</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>Cinder</span></strong></p>
+<p><strong>解析：</strong> OpenStack解决方案中，负责提供持久化块存储的模块是Cinder（弹性块存储）</p>
+<p><strong>题目4：</strong> 在Linux虚拟机中能够实现对逻辑卷进行管理的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> OVM</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>LVM</span></strong></p>
+<p><strong>选项 C：</strong> PVM</p>
+<p><strong>选项 D：</strong> DVM</p>
+<p><strong>解析：</strong> Linux虚拟机中，可以使用逻辑卷管理器（Logical Volume Manager，LVM）实现对逻辑卷的管理。LVM是一种磁盘分区和管理的工具，它可以将多个物理卷（Physical Volumes，PVs）组合成一个逻辑卷组（Logical Volume Group，LVG），并将逻辑卷（Logical Volume，LV）作为可分配给文件系统或其他用途的资源。
+使用LVM可以创建、删除、调整和迁移逻辑卷，而无需关心底层的物理卷。这使得磁盘空间的管理更加灵活和可扩展，并且可以更好地利用磁盘资源。
+在Linux系统中，可以使用命令行工具（如lsblk、pvdisplay、vgdisplay、lvdisplay等）或图形界面工具（如gnome-disks、parted等）来管理和监控LVM。</p>
+<p><strong>题目5：</strong> 在KWM中，虚拟机网卡连接物理网络的方式有两种，分别是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>桥接、地址转换</span></strong></p>
+<p><strong>选项 B：</strong> 地址转换、直通</p>
+<p><strong>选项 C：</strong> 桥接、直通</p>
+<p><strong>选项 D：</strong> 直通、桥接</p>
+<p><strong>解析：</strong> 默认方式为地址转换 ，数据包由 NAT 方式通过主机的接口进行传送。 其二，使用 桥接 方式，外部的机器可以直接联通到虚拟机，就像联通到你的主机一样。</p>
+<p><strong>题目6：</strong> 在FusionCompute中，虚拟机跨主机 (intel不同型号CPU)热迁移，集群需设置以下哪一项策略?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> DPM</p>
+<p><strong>选项 B：</strong> DRS</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>IMC</span></strong></p>
+<p><strong>选项 D：</strong> HA</p>
+<p><strong>解析：</strong> FusionCompute跨主机的虚拟机热迁移需要使用HA（High-Availability）功能。</p>
+<p><strong>题目7：</strong> 在FusionCompute中，可以给虚拟机设置的QOS参数不包括</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>GPU</span></strong></p>
+<p><strong>选项 B：</strong> 内存</p>
+<p><strong>选项 C：</strong> 磁盘IOPS</p>
+<p><strong>选项 D：</strong> 网络</p>
+<p><strong>选项 E：</strong> CPU</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目8：</strong> 在FusionCompute中，当磁盘的配置模式为“普通”时，以下哪种数据存储类型的磁盘容量不支持在线增加?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>FusionStorageBlock存储</span></strong></p>
+<p><strong>选项 B：</strong> NAS存储</p>
+<p><strong>选项 C：</strong> 虚拟化SAN存储</p>
+<p><strong>选项 D：</strong> 虚拟化本地硬盘</p>
+<p><strong>解析：</strong> 当磁盘所属的数据存储类型为虚拟化本地硬盘、虚拟化SAN存储、NAS存储时，在线增加磁盘容量可直接生效的操作系统请参见《FusionSphere SIA 华为客户机操作系统兼容性指南(KVM企业虚拟化)》，其余操作系统需重启虚拟机生效。</p>
+<p><strong>题目9：</strong> 在华为FusionComputer中，当计算节点掉电时，系统可以将该计算节点上具有HA属性的虚拟机在其他计算节点拉起，下列选项中不是实现该功必要条件的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 虚拟机未与主机绑定</p>
+<p><strong>选项 B：</strong> 计算节点所属集群开启HA</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>计算节点上具有HA属性的虚拟机均使用同一网段IP</span></strong></p>
+<p><strong>选项 D：</strong> 源目计算节点使用共享数据存储</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目10：</strong> 在物理网络中，哪个设备能够进行路由转发?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> Hub</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>路由器</span></strong></p>
+<p><strong>选项 C：</strong> 二层交换机</p>
+<p><strong>选项 D：</strong> 物理服务器网卡</p>
+<p><strong>解析：</strong> 路由的转发是由路由器进行的；路由器又可以称之为网关设备。路由器就是在OSI/RM中完成的网络层中继以及第三层中继任务，对不同的网络之间的数据包进行存储、分组转发处理，其主要就是在不同的逻辑分开网络。而数据在一个子网中传输到另一个子网中，可以通过路由器的路由功能进行处理</p>
+<p><strong>题目11：</strong> 在实际工作中，VLAN能实现的功能是哪个?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 两个部门的虚拟机使用了不同的VLAN以后，相互之间不能再通信</p>
+<p><strong>选项 B：</strong> 属于不同VLAN的虚拟机可以使用相同的IP地址，且不会发生地址冲c突</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>属于相同VLAN的虚拟机必须使用相同地址段的IP地址，否则无法正常通信</span></strong></p>
+<p><strong>选项 D：</strong> 属于相同VLAN的虚拟机可以使用不同地址段的IP地址，且能使用广播发现彼此</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目12：</strong> 在交换机上下列哪个技术可以提高链路速率?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> VLAN</p>
+<p><strong>选项 B：</strong> VXLAN</p>
+<p><strong>选项 C：</strong> LDAP</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>LACP</span></strong></p>
+<p><strong>解析：</strong> LACP为链路聚合，能有效提高链路效率；LDAP是目录访问协议；VLAN一般指虚拟局域网；VXLAN是指VXLAN是一种网络虚拟化技术，大型云计算在部署时的扩展问题，是对VLAN的一种扩展</p>
+<p><strong>题目13：</strong> 在计算虚拟化架构中，主机分为三个层次，以下哪一个选项不属于主机的三个层次?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> Hypervisor</p>
+<p><strong>选项 B：</strong> GuestMachine</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>DockerEngine</span></strong></p>
+<p><strong>选项 D：</strong> HostMachine</p>
+<p><strong>解析：</strong> 在计算虚拟化架构中，主机通常分为三个层次：
+Hypervisor：也称为虚拟机监视器（Virtual Machine Monitor，VMM），它是在物理服务器和虚拟机之间运行的一个软件层。hypervisor负责创建和管理虚拟机，并监控它们的资源使用情况。
+GuestMachine：这是运行在hypervisor上的虚拟机。每个虚拟机都运行在自己的GuestMachine中，并拥有自己的操作系统和应用程序。
+Host machine：这是物理服务器，是虚拟机运行的物理环境。Host machine通常包括CPU、内存、存储和其他硬件资源。
+在给定的选项中，DockerMachine不属于主机的三个层次。DockerMachine是Docker平台的一部分，用于自动化Docker容器的部署和管理。它并不直接属于计算虚拟化架构中的层次之一。</p>
+<p><strong>题目14：</strong> 在华为FusionCompute中执行虚拟机更改主机热迁移操作，以下描述不属于其限制条件的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 目的主机不能处于维护模式</p>
+<p><strong>选项 B：</strong> 虚拟机不能使用“裸设备”类型的数据存储</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>不能挂载“共享”类型的磁盘</span></strong></p>
+<p><strong>选项 D：</strong> 虚拟机的状态必须为“运行中”</p>
+<p><strong>解析：</strong> 以下描述不属于其限制条件的是：C.不能挂载“共享”类型的磁盘。
+请注意，虚拟机的状态必须为“运行中”，目的主机不能处于维护模式，以及虚拟机不能使用“裸设备”类型的数据存储，这些都是执行虚拟机更改主机热迁移的限制条件。</p>
+<p><strong>题目15：</strong> 在华为FusionCompute中将端组VLANID设置为0代表？</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 将通过该端组的数据帧的Van标签设置为</p>
+<p><strong>选项 B：</strong> 只允许带有Van0标签的数据通过该端组</p>
+<p><strong>选项 C：</strong> 允许0个带有Van标签的数据帧通过该端组</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>对通过本端组的数据帧不做任何修改</span></strong></p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目16：</strong> 在华为Fusioncompute中创建一块新的磁盘，下列操作哪个是不正确的?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>将磁盘模式设置为“独立-非持久”，并将裸设备映射改为“支持”</span></strong></p>
+<p><strong>选项 B：</strong> 将磁盘的配置模式设置为“精简”，井将磁盘模式设置为 “独立-非持久”</p>
+<p><strong>选项 C：</strong> 将磁盘的配置模式设置为“精简”，并将磁盘模式设置为"独立持久"</p>
+<p><strong>选项 D：</strong> 将磁盘类型设置为“普通”，并将磁盘式设置为“独立-非持久”</p>
+<p><strong>解析：</strong> 在华为Fusion Computer中创建新的磁盘，正确的操作步骤应该是先将磁盘模式设置为“独立-非持久”，然后再将裸设备映射改为“支持”。选项A中，将磁盘模式设置为“独立-非持久”和将裸设备映射改为“支持”的顺序是错误的，因此选项A是不正确的。 其他选项B、C、D的描述都是正确的，它们分别涉及到将磁盘的配置模式设置为“精简”，将磁盘模式设置为“独立持久”，以及将磁盘类型设置为“普通”。这些步骤都是创建新磁盘时需要遵循的正确操作。</p>
+<p><strong>题目17：</strong> 在华为Fusioncompute中，以下只能作为非虚拟化存储的是 0</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>Fusionstorage</span></strong></p>
+<p><strong>选项 B：</strong> SAN</p>
+<p><strong>选项 C：</strong> 本地磁盘</p>
+<p><strong>选项 D：</strong> NAS</p>
+<p><strong>解析：</strong> 只能作为非虚拟化存储的是：FusionStorage</p>
+<p><strong>题目18：</strong> 在华为Fusioncompute中，以下关于虚拟机网卡描述正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 虚拟网卡和物理网卡有本质的区别，虚拟网卡不需要MAC地址</p>
+<p><strong>选项 B：</strong> 虚拟网卡的MAC地址和IP地址都是由VRM自动分配的</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>虚拟网卡的MAC地址和IP地址都可以手动指定</span></strong></p>
+<p><strong>选项 D：</strong> 虚拟网卡的IP地址需要手动指</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目19：</strong> 在华为FusionCompute中，以下关于虚拟机存储热迁移描述不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 存储热迁移可以在不同的存储设备之间进行</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>存储热迁移可以在不同的虚拟磁盘之间进行</span></strong></p>
+<p><strong>选项 C：</strong> 存储热迁移可以在不同的存储资源之间进行</p>
+<p><strong>选项 D：</strong> 存储热迁移可以在不同的数据存储之间进行</p>
+<p><strong>解析：</strong> 虚拟机正常运行时，管理员可通过手动操作，将虚拟机的磁盘迁移至其他存储单元。存储热迁移可在存储虚拟化管理下的同一个存储设备内、不同存储设备之间进行迁移。热迁移使客户在业务无损的情况下动态调整虚拟机存储资源，以实现设备维护等操作</p>
+<p><strong>题目20：</strong> 在华为FusionCompute中，以下关于上行链路描述不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 一个主机上可以有多条连接不同DVS的上行链路</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>上行链路是DVS连接主机物理网卡的链路一台主机只有一条上行链路</span></strong></p>
+<p><strong>选项 C：</strong> 多个DVS不能共享同一条上行链路</p>
+<p><strong>选项 D：</strong> 上行链路可以对应一个物理网，也可以对应多个物理网绑定后的逻辑端</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目21：</strong> 在华为FusionCompute中，以下关于计算资源调度的衡量因素描述不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 设为“内存”时，满足内存条件即触发调度策略</p>
+<p><strong>选项 B：</strong> 设为“CPU”时，满足CPU条件即触发调度策略</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>设为“CPU和内存”时，满足CPU及内存条件才触发调度策略</span></strong></p>
+<p><strong>选项 D：</strong> 设为“CPU和内存”时，满足CPU或内存条件即触发调度策略</p>
+<p><strong>解析：</strong> 在华为Fusion Computer中，计算资源调度通常会考虑多个因素，包括CPU、内存、磁盘I/O等。当设定为“CPU和内存”时，只有在满足CPU或内存条件之一时才会触发调度策略，而不是同时满足。因此，选项A的描述是不正确的。</p>
+<p><strong>题目22：</strong> 在华为Fusioncompute中，以下关于存储相关概念描述不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>数据存储可以是IPSAN、FCSAN、NAS等</span></strong></p>
+<p><strong>选项 B：</strong> VHD是虚拟机磁盘文件格式</p>
+<p><strong>选项 C：</strong> 存储设备对应的是物理存储中的逻辑单元，例如LUN</p>
+<p><strong>选项 D：</strong> 一台物理存储设备可以作为存储资源</p>
+<p><strong>解析：</strong> 存储设备可以是IPSAN、FCSAN、NAS等</p>
+<p><strong>题目23：</strong> 在华为Fusioncompute中，以下关于安全组和规则描述不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>安全组规则的变更需要手动应用到安全组内的虚拟机</span></strong></p>
+<p><strong>选项 B：</strong> 必须先创建安全组，才能添加规则</p>
+<p><strong>选项 C：</strong> 安全组在未添加规则前，默认拒绝所有</p>
+<p><strong>选项 D：</strong> 删除安全组的前提是安全组内无虚拟机</p>
+<p><strong>解析：</strong> 安全组规则的变更不需要手动应用到安全组内的虚拟机</p>
+<p><strong>题目24：</strong> 在华为FusionCompute中，以下关于IMC功能描述不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 集群内CNA主机CPU型号不一致时建议开启IMC功能</p>
+<p><strong>选项 B：</strong> IMC仅支持从低版本CPU功能集向高版本迁移</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>集群内CNA主机内存主频不一致时建议开启IMC功能</span></strong></p>
+<p><strong>选项 D：</strong> 开启IMC不能确保虚拟机在不同型号CPU的主机间迁移成功，需根据实际场景确定</p>
+<p><strong>解析：</strong> 集群内CNA主机内存主频不一致时不建议开启IMC功能</p>
+<p><strong>题目25：</strong> 在华为FusionCompute中，以下关于CPU资源QoS描述不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> CPU预留定义了多个虚拟机亮争物理CPU资源的时候分配的最低计算资源</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>CPU限额定义多个虚拟机在竞争物理CPU资源时按优先级分配计算资源</span></strong></p>
+<p><strong>选项 C：</strong> CPU份额定义多个虚拟机在竟争物理CPU资源时按比例分配计算资源</p>
+<p><strong>选项 D：</strong> CPU预留只在个虚拟机竞争计算资源的时候才发挥作用，如果没有竞争情况发生，有需求虚拟机可以独占物理CPU资源</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目26：</strong> 在华为FusionCompute中，以下关于CPUQOS技术描述不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> ”预留”的作用是保证虚拟机计算能力的下限，即最少使用多少资源</p>
+<p><strong>选项 B：</strong> "份额”的作用是在计算脊源不足的时候，根据多个虚拟机的相对CP</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>U份额值进行资源的均衡和调整"限制”的作用是规定主机是上运行的最大数量</span></strong></p>
+<p><strong>选项 D：</strong> 通过调整“预留”"份额”"限制”实现对虚拟机CPU资源使用的控制</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目27：</strong> 该图片描述的服务模式是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>laas</span></strong></p>
+<p><strong>选项 B：</strong> Daas</p>
+<p><strong>选项 C：</strong> Paas</p>
+<p><strong>选项 D：</strong> Saas</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目28：</strong> 随着“互联网”的被重视已经大数据、云计算的兴起、相关技术更是如雨后春笋般进入大家的视野中，其中被广泛应用和重视的就是Docker下列关于Docker的说法不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> Docker可以打包应用的底层环境，保证各应用在进行迁移后仍然可以正常运行</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>Docker需要在宿主机或者宿主机操作系统上创建虚拟层、虚拟操作系统等，然后再进行安装</span></strong></p>
+<p><strong>选项 C：</strong> Docker与其他虚拟机技术的相比，Docker的启动速度 更快</p>
+<p><strong>选项 D：</strong> Docker利用容器来运行，容器是从Image创建的运行实例</p>
+<p><strong>解析：</strong> Container(Docker容器)，在宿主机器、宿主机器操作系统上创建Docker引擎，在引擎的基础上再安装应用</p>
+<p><strong>题目29：</strong> 华为FusionComputer中，用户使用VNC登录虚拟机后防线不能正常操作，存在卡死的想象(如无法打开文件等)，早成此故障最有可能的原因是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 虚拟机损坏</p>
+<p><strong>选项 B：</strong> 业务链路不稳定</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>管理链路不稳定</span></strong></p>
+<p><strong>选项 D：</strong> 存储链路不稳定</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目30：</strong> 以下关于大数据与云计算的描述正确的是 0</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 云计算是指无法在一定时间范围内用常规软件工具进行捕捉.管理和处理的数据集合</p>
+<p><strong>选项 B：</strong> 大数据是一种按量付费的模式，这种模式提供可用的、便携的、按需的网络访问</p>
+<p><strong>选项 C：</strong> 计算无法作为大数据处理的底层计算资源</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>大数据可以作为云计算的一类服务，供用户按需选择</span></strong></p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目31：</strong> 以下关于模板格式描述不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> ovf 是虚拟机的描述文件，vhd 是虚拟机的磁盘文件</p>
+<p><strong>选项 B：</strong> 虚拟机模板格式分为为ova和ovf两种</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>ovf 格式的模板只包含一个 ovf 文件和一个 vhd 文件</span></strong></p>
+<p><strong>选项 D：</strong> ova格式的模板导出后只包含一个文件</p>
+<p><strong>解析：</strong> ovf格式它一般有几个部分组成，分别是OVF文件、.MF文件、.CERT文件、.VMDK文件和.ISO文件。OVF文件可以用于虚拟机在不同虚拟化平台上的迁移</p>
+<p><strong>题目32：</strong> 雾计算(ogcomputing)是一种分布式计算模型，将云计算的概念扩展到网络边缘，以支持移动和物联网和地理分布式应用。以下关于雾计算的说法不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 雾计算可以在网络边绿快速生成大数据、减少延迟</p>
+<p><strong>选项 B：</strong> 零计算可以实现数据短暂缓存，减少网络压力</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>雾计算比云计算提供更高可靠性的网络和物理设备安全</span></strong></p>
+<p><strong>选项 D：</strong> 雾计算可以减少核心nternet中消耗的带宽，限制数据向本地网络的移动</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目33：</strong> 以下关于Faas特点的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>快速启动，生命周期长</span></strong></p>
+<p><strong>选项 B：</strong> 无穷弹性计算</p>
+<p><strong>选项 C：</strong> 无需运维</p>
+<p><strong>选项 D：</strong> 聚焦代码</p>
+<p><strong>解析：</strong> FaaS 是一种云计算模型，其主要特点是用户根本不需要租用任何虚拟机ーー从启动虚拟机，执行代码，返回结果和停止虚拟机这些由云提供商处理的整个过程。问题就是镜像的种类多样、镜像拉取时间过长的问题。大量的镜像可能会带来一些管理方面的工作。另外，容器的启动时间也会严重依赖于镜像的拉取时间，所以启动时间慢</p>
+<p><strong>题目34：</strong> 以下华为Fusion Compute中虚拟机磁盘模式的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 独立-非持久</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>从属-持久</span></strong></p>
+<p><strong>选项 C：</strong> 从属</p>
+<p><strong>选项 D：</strong> 独立-持久</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目35：</strong> 以下关于OpenStack功能特性描述正确的是哪一项</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>资源分配与调度</span></strong></p>
+<p><strong>选项 B：</strong> 系统管理与维护</p>
+<p><strong>选项 C：</strong> 资源接入与抽象</p>
+<p><strong>选项 D：</strong> 应用生命周期管理</p>
+<p><strong>解析：</strong> OpenStack是一个用于构建云基础架构的开源软件平台，提供了包括资源分配与调度、系统管理与维护、资源接入与抽象和应用生命周期管理等多种功能特性。在题目所给的选项中，A选项与OpenStack的主要功能特性之一相符，而其他选项虽然也是云平台所需要的功能，但并非OpenStack所特有的。因此，答案是A。</p>
+<p><strong>题目36：</strong> 某企业在业务发展初期，对于业务性能具有较高要求，所以存储使用的是raido架构，现在经过发展想要升级存储系统，在保证高性能的情况下，还需要较高的数据保护能力。现有足够的资金进行升级，请问以下哪项符合要求</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>RAID 10</span></strong></p>
+<p><strong>选项 B：</strong> RAID 3</p>
+<p><strong>选项 C：</strong> RAID 5</p>
+<p><strong>选项 D：</strong> RAID 1</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目37：</strong> 以下关于KVM架构的描述错误的是哪一项</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>KVM虚拟化牺牲了二进制兼容</span></strong></p>
+<p><strong>选项 B：</strong> KVM架构下的内核实现CPU与内存虚拟化</p>
+<p><strong>选项 C：</strong> KVM虚拟化是一种开源技术</p>
+<p><strong>选项 D：</strong> KVM架构可以通过virtio驱动实现半虚拟化</p>
+<p><strong>解析：</strong> KVM（Kernel-based Virtual Machine）基于Linux内核实现，不牺牲二进制兼容，实现CPU和内存虚拟化。A错误</p>
+<p><strong>题目38：</strong> 以下关于VLAN技术正确的是哪些项</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 同一台设备上不能配置不同的VLAN</p>
+<p><strong>选项 B：</strong> VLAN链路分为access链路和trunk链路两种</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>VLAN报文的VID可以标识帧所属VLAN</span></strong></p>
+<p><strong>选项 D：</strong> VLAN只能隔离冲突域</p>
+<p><strong>解析：</strong> VLAN的接口类型分为access，trunk，hybird;VLAN虚拟局域网</p>
+<p><strong>题目39：</strong> 测试人员想测试不同虚拟化架构的性能，在一台物理主机内同时安装了Xen和KVM，以下哪一项描述是正确的。</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> xen先启动，基于Xen运行KVM，提升虚拟化数据读写的性能</p>
+<p><strong>选项 B：</strong> KVM和Xen冲突，虚拟化平台无法运行</p>
+<p><strong>选项 C：</strong> KVM先启动，基于运行Xen,保证每台虚拟机I/O受到hypervisor的管控</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>KVM和Xen无法同时运行，开机需要选择使用哪个内核</span></strong></p>
+<p><strong>解析：</strong> 在物理主机内同时安装了Xen和KVM的情况下，Xen和KVM都是虚拟化技术，理论上是可以同时运行的。然而，开机时需要选择使用哪个内核，也就是说需要手动选择虚拟化架构。因此，D选项描述是正确的。
+需要注意的是，在实际应用中，Xen和KVM可能会存在一定的冲突，特别是在虚拟机级别的兼容性和性能方面，因此在选择安装和使用时需要进行适当的考虑和测试。</p>
+<p><strong>题目40：</strong> 以下关于二层交换原理错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 二层交换机通过解析和学习以大网顿的mac来维护mac接口与地址的正确应关系</p>
+<p><strong>选项 B：</strong> 二层交换设备工作在osi模型的第二层，即数据链路层</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>通过报文源mac来查找mac表决定向哪一个接口转发</span></strong></p>
+<p><strong>选项 D：</strong> 二层交换设备能隔离冲突域</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目41：</strong> 以下关于 Fusion Computer 虚拟化平台中拟机 Tools 的描述错误的是哪一项</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 在安装 tools 构成若强制关闭虚拟机可能导致安装失败或安装后系统不稳定</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>tools不一定要和虚拟机操作系统版本配套</span></strong></p>
+<p><strong>选项 C：</strong> tools是虚拟机的驱动程序</p>
+<p><strong>选项 D：</strong> 通过tools可查询到虚拟机的主机名、网卡、IP地址系统时间及虚拟机idle值</p>
+<p><strong>解析：</strong> 在安装tools可以重启关闭，不会导致系统异常</p>
+<p><strong>题目42：</strong> 以下关于虚拟化特点的描述错误的是哪一项</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>独立:软硬件结用和虚拟化依赖于底层硬件，需要考虑兼容性问题</span></strong></p>
+<p><strong>选项 B：</strong> 隔离:虚拟机之间逻辑隔离彼此不受影响</p>
+<p><strong>选项 C：</strong> 分区:每一个虚拟机单独划分资源</p>
+<p><strong>选项 D：</strong> 封装:将虚拟机封装成文件的形式保存在物理设备上</p>
+<p><strong>解析：</strong> 相对于硬件独立:无需修改即可在任何服务器上运行虚拟机。</p>
+<p><strong>题目43：</strong> 以下哪一项不能够被 Libvirt 工具所管理</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> AXen</p>
+<p><strong>选项 B：</strong> Hyper-v</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>Openstack</span></strong></p>
+<p><strong>选项 D：</strong> KVM</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目44：</strong> 以下关于内存复用约束限制的描述，正确的是哪些项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 直通了GPU的虚拟机也可以开启内存复用</p>
+<p><strong>选项 B：</strong> 内存复用不能使虚拟机内存规格总和大于服务器规格内存总和</p>
+<p><strong>选项 C：</strong> 内存交换分区默认与主机系统盘相同配置</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>主机需配置足够的交换空间才能保证内存复用功能的稳定运行</span></strong></p>
+<p><strong>解析：</strong> 内存交换分区默认与主机系统盘相同配置，内存复用使虚拟机内存规格总和大于服务器规格内存总和</p>
+<p><strong>题目45：</strong> 以下哪一项不属于Linux 安装了 KVI 模块后会增加的模式?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 客户模式</p>
+<p><strong>选项 B：</strong> 用户模式</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>中断模式</span></strong></p>
+<p><strong>选项 D：</strong> 内核模式</p>
+<p><strong>解析：</strong> Linux安装了KVM模块后，会增加三种模式，分别是客户模式、用户模式和内核模式。客户模式是虚拟机在宿主机器上运行时的模式，用户模式是虚拟机中的CPU模式，内核模式是宿主机器的CPU模式。而中断模式不属于KVM模块增加的模式。因此，选项C是正确的答案</p>
+<p><strong>题目46：</strong> 在 FusionCompute 中，以下关于安全组的描述，错误的是哪一项 ?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 虚拟机一块网卡只能加入一个安全组中</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>安全组支持SRIOV 直通模式的虚拟机网卡</span></strong></p>
+<p><strong>选项 C：</strong> 安全组不支持用户态的虚拟机,网卡</p>
+<p><strong>选项 D：</strong> 安全组支持普通内核态的虚拟机网卡</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目47：</strong> 以下关于集群中时间同步机制的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 保持虚拟机时间同步可以避免运行异常</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>备份过程中主机间可以不同步时间</span></strong></p>
+<p><strong>选项 C：</strong> 可以设置主机外的时钟源控制虚拟机的时间</p>
+<p><strong>选项 D：</strong> 设置虚拟机时间同步主机时，时间会受主机时间调整的影响</p>
+<p><strong>解析：</strong> 保持虚拟机时间同步可以避免运行异常，使用备份过程中必须要保持时间同步</p>
+<p><strong>题目48：</strong> 磁盘阵列中映射给主机使用的通用存储空单元是() ，它是在RAID的基础上创建的逻辑空间</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 存储池Pool</p>
+<p><strong>选项 B：</strong> 逻辑分区Partition</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>逻辑单元LUN</span></strong></p>
+<p><strong>选项 D：</strong> 卷volume</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目49：</strong> 在华为Fusioncompute中,使用IPSAN创建磁盘的操作包括
+1创建存储资源
+2在主机上添加存储端口
+3添加数据存储
+4创建磁盘
+正确的操作顺序:</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>2-1-3-4</span></strong></p>
+<p><strong>选项 B：</strong> 1-2-3-4</p>
+<p><strong>选项 C：</strong> 1-3-4-2</p>
+<p><strong>选项 D：</strong> 4-2-1-3</p>
+<p><strong>解析：</strong> 在华为Fusioncompute中，使用IPSAN创建磁盘的操作包括首先创建存储资源，然后在主机上添加存储端口，接着添加数据存储，最后创建磁盘。这个操作顺序是：2-1-3-4。因此，正确答案是A。</p>
+<p><strong>题目50：</strong> 安装华为FusionCompute时，推荐将VRM部署在哪种存储上?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>本地磁盘</span></strong></p>
+<p><strong>选项 B：</strong> IPSAN</p>
+<p><strong>选项 C：</strong> FCSAN</p>
+<p><strong>选项 D：</strong> NAS</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目51：</strong> FusionCompute分布式虚拟交换机端组的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 端组支持配置IP与MAC绑定,提升安全性</p>
+<p><strong>选项 B：</strong> 接在同一端组的虚拟机网卡，具有相同的网络属性</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>一个分布式交换机在每个计算节点只能创建一个端组</span></strong></p>
+<p><strong>选项 D：</strong> 端组是一种策略设置机制，这些策略用于管理与端组相连的网络</p>
+<p><strong>解析：</strong> 一个分布式交换机可以有多个端口组</p>
+<p><strong>题目52：</strong> NUMA的描述中不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> GuestNUMAE就是通过向虚拟机呈现NUMA结构，使GuestOs及其内部应用识别NUMA结构，以达到提升应用性能的目的</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>NUMA技术使得CPU访问同Node中内存速度和访问其他Node中内存速度相近</span></strong></p>
+<p><strong>选项 C：</strong> HostNUMA主要提供CPU负载均衡机制，解决CPU资源分配不平衡引起的VM性能瓶颈问题</p>
+<p><strong>选项 D：</strong> HostNUMA保证VM访问本地物理内存，减少了内存访问延迟，可以提升VM性能</p>
+<p><strong>解析：</strong> NUMA 技术使得 CPU 访问同 Node 中内存速度和访问其他 Node 中内存速度更快</p>
+<p><strong>题目53：</strong> NAS的架构体系中不包括以下哪项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 卷管理模块</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>状态校验模块</span></strong></p>
+<p><strong>选项 C：</strong> 文件系统</p>
+<p><strong>选项 D：</strong> 网络接口</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目54：</strong> KVM虚拟化架构中包括模块、QEMU和Lbvirt,以下关于这些模块描述不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>Libvirt+QEMU可以构成一套虚拟化解决方案</span></strong></p>
+<p><strong>选项 B：</strong> KVM模块主要负责vCPU的创建和虚拟内存分配</p>
+<p><strong>选项 C：</strong> QEMU主要负责I/O操作模拟</p>
+<p><strong>选项 D：</strong> KVM+QEMU可以构成一套虚拟化解决方案</p>
+<p><strong>解析：</strong> QEMU 的 vitio 实现采用在 Guest OS 内核中安装前端驱动 和在 QEMU 中实现后端驱动的方式。前后端驱动通过 vring 直接通信达到提高 I/O 性能的目的；Libvirt是管理虚拟机和其他虚拟化功能，比如存储管理，网络管理的软件集合。位于虚拟机和云管理中间的一个抽象管理层。它包括一个API库，一个守护程序（libvirtd）和一个命令行工具（virsh）；libvirt本身构建于一种抽象的概念之上。它为受支持的虚拟机监控程序实现的常用功能提供通用的API；libvirt的主要目标是为各种虚拟化工具提供一套方便、可靠的编程接口，用一种单一的方式管理多种不同的虚拟化提供方式。</p>
+<p><strong>题目55：</strong> 某企业起步初期部署了FusionCompute承载业务，运行中期需要更新物理服务器的规格和配置，同时不能中断现有业务，以下哪一选项能帮助该企业实现目标?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 资源热添加</p>
+<p><strong>选项 B：</strong> 动态资源调整</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>虚拟机热迁移</span></strong></p>
+<p><strong>选项 D：</strong> 高可用HA</p>
+<p><strong>解析：</strong> 虚拟机热迁移是指在不中断业务的情况下，将同一个集群中虚拟机从一台物理服务器移动至另一台物理服务器。虚拟机管理器提供内存数据快速复制和共享存储技术，确保虚拟机迁移前后数据不变。</p>
+<p><strong>题目56：</strong> (单选题)某公司已将业务部署在FusionCompute平台上为使虚拟机内存访问性能达到最优,需要用到以下虚拟机特性的哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> NUMA</p>
+<p><strong>选项 B：</strong> 资源热添加</p>
+<p><strong>选项 C：</strong> 模板部署</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>快照</span></strong></p>
+<p><strong>解析：</strong> NUMA是非均匀内存访问架构是指多处理器系统中,内存的访问时间是依赖于处理器和内存之间的相对位置的。 这种设计里存在和处理器相对近的内存,通常被称作本地内存</p>
+<p><strong>题目57：</strong> 华为FusionComputeDRS规则能够实现以下哪个需求?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 集群中的某个主机不可用时，运行在该主机上的虚拟机自动迁移到其他主机上</p>
+<p><strong>选项 B：</strong> 虚拟机配置不满足业务需求时，管理系统自动为该虚拟机增加CPU资源</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>要求某虚拟机运行在特定的主机,上</span></strong></p>
+<p><strong>选项 D：</strong> Windows虚拟机发生蓝屏后，系统自动将其重启</p>
+<p><strong>解析：</strong> 华为Fusion ComputerDRSI 规则能够实现以下哪个需求？C. 要求某虚拟机运行在特定的主机上。</p>
+<p><strong>题目58：</strong> 关于VLAN的作用描述不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 隔离广播域</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>提高物理交换机接带宽</span></strong></p>
+<p><strong>选项 C：</strong> 增强网络的安全性</p>
+<p><strong>选项 D：</strong> 提高网络的健壮性</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目59：</strong> 当物理主机上的一台虚机发生了故障，不会影响该物理主机上的其他虚拟机，这属于虚拟化技术的哪个特点?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 独立</p>
+<p><strong>选项 B：</strong> 分区</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>隔离</span></strong></p>
+<p><strong>选项 D：</strong> 封装</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目60：</strong> 下列关于热迁移和冷迁移的描述不正确的是 0</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 冷迁移是将停止状态的虚拟机从一台主机迁移到另一台主机，迁移过程中业务会发生中断</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>热迁移和冷迁移都会迁移内存数据和磁盘数据</span></strong></p>
+<p><strong>选项 C：</strong> 热迁移是将运行状态的虚拟机从一台主机迁移到另一台主机，迁移过程中业务不会发生中断</p>
+<p><strong>选项 D：</strong> 在性能测试-可靠性测试中，有针对虚拟机迁移的测试，包括热迁移、冷迁移、迁移时长、业务中断时长等</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目61：</strong> 为主机配置IPSAN时，通常需要在存储设备上为主机配置 使主机与IPSAN进行映射</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> IscsiClient</p>
+<p><strong>选项 B：</strong> IsCSITargetB</p>
+<p><strong>选项 C：</strong> IscsIServer</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>ISCSIlnitiator</span></strong></p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目62：</strong> 在FusionAccess中，以下哪一项不是快速发放中"创建虚拟机”阶段需要进行的操作?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>选择虚拟机所在的桌面组</span></strong></p>
+<p><strong>选项 B：</strong> 选择虚拟机所在的虚拟机组</p>
+<p><strong>选项 C：</strong> 选择虚拟机模板</p>
+<p><strong>选项 D：</strong> 选择需要发放的虚拟机数量</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目63：</strong> 以下关于NAS的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 支持RAID技术</p>
+<p><strong>选项 B：</strong> 可以通过TCP/IP协议链接主机</p>
+<p><strong>选项 C：</strong> 可以访问单个文件</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>相比于SAN存储，主机的开销更高</span></strong></p>
+<p><strong>解析：</strong> NAS（Network Attached Storage）是一种网络存储设备，它通常通过TCP/IP协议与主机连接，支持RAID技术以增强数据安全性和性能。它可以通过网页浏览器等方式供用户访问并访问单个文件。SAN（Storage Area Network）是一种专用的存储网络，主机的开销通常较低。因此，相比于SAN存储，NAS的开销较高是不正确的描述。所以，D选项是错误选项。</p>
+<p><strong>题目64：</strong> 以下关于QEMU-KVM的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> QEMU-KVM提供原生工具来对虚拟机的创建、修改和删除等进行管理</p>
+<p><strong>选项 B：</strong> 在QEMU-KVM中，QEMU运行在用户空间</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>Guest Os下发指令时，与CPU和内存相关的操作会通过QEMU来实现</span></strong></p>
+<p><strong>选项 D：</strong> 在QEMU-KVM中，KVM运行在内核空间</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目65：</strong> 以下关于FusionCompute桌面云组件的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> HDC是虚拟桌面管理软件的核心组件，根据ITA发送的请求进行桌面组管理，用户和虚拟桌面的管理管理，处理虚拟机登录的相关请求等</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>VAG的主要功能提供桌面接入的图形化工具界面形式终端，相较于WEB UI形式更加轻便，界面更加友好，提升使用体验</span></strong></p>
+<p><strong>选项 C：</strong> ITA为用户提供管理虚拟机接口，实现虚拟机的创建与分配、虚拟机状态管理、虚拟机模板管理、虚拟机系统操作维护等功能</p>
+<p><strong>选项 D：</strong> WI为最终用户提供web登录页面，在用户发起登录请求时，将用户的登录信息转发到LiteAS上进行用户身份验证</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目66：</strong> 以下关于在FusionCompute中创建的磁盘的描述，错误的一项是?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>当磁盘类型为“共享”时，可以使用该磁盘的虚拟机数量没有限制</span></strong></p>
+<p><strong>选项 B：</strong> 当磁盘配置模式类型为“普通”时，创建所需的的时间比配置模式模式为“精简”的</p>
+<p><strong>选项 C：</strong> 磁盘要更久当磁盘类型为“普通”时，该磁盘只能单个虚拟机使用</p>
+<p><strong>选项 D：</strong> 当磁盘配置模式类型为“精简”时，可能导致数据存储超分配</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目67：</strong> 以下哪一项技术不能实现网络管理?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 分布式虚拟交换机</p>
+<p><strong>选项 B：</strong> 虚拟网卡</p>
+<p><strong>选项 C：</strong> 网络I/O控制</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>快照</span></strong></p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目68：</strong> 人工智能是研究、开发用于模拟延伸和扩展人工智能的理论、方法、技术及应用系统的一门新的技术科学，以下关于人工智能说法错误的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 人工智能没有人类的意识所持有的能动的创造力</p>
+<p><strong>选项 B：</strong> 人工智能是无意识的机械的物理的过程</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>人工智能是物品通过网络相互连通进行信息交互的技术</span></strong></p>
+<p><strong>选项 D：</strong> 人工智能没有社会性</p>
+<p><strong>解析：</strong> 人工智能是人类模拟智能的理论、方法、技术及应用系统的技术科学。它没有意识的创造力，只是一个机械的过程，属于技术科学的主权。人工智能的研究涉及机器学习自然、语言处理选项C中的鳄梨忽略了人工智能的本质，将人工智能与网络技术混淆了，因此是错误的。</p>
+<p><strong>题目69：</strong> 以下哪个场景中，操作系统发出的核心指令可以直接发往底层硬件?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> CPU全虚拟化场景</p>
+<p><strong>选项 B：</strong> CPU半虚拟化场景</p>
+<p><strong>选项 C：</strong> 硬件辅助虚拟化场景</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>非虚拟化场景</span></strong></p>
+<p><strong>解析：</strong> 在虚拟化技术中，CPU全虚拟化场景和硬件辅助虚拟化场景，操作系统发出的核心指令都要通过虚拟机监视器进行转换后才能发往底层硬件执行。在CPU半虚拟化场景中，操作系统发出的核心指令虽可直接发往底层硬件，但还需要在虚拟机监视器和物理CPU之间进行两次转换。而在非虚拟化场景中，操作系统发出的核心指令可直接发往底层硬件。 因此，选项D是正确的答案。</p>
+<p><strong>题目70：</strong> 在华为Fusion Compute中，以下关于热迁移的描述不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 虚拟机热迁移过程中使用内存数据快速复制及共享存储的技术，确保虚拟机迁移前后数据不变</p>
+<p><strong>选项 B：</strong> 热迁移包括虚拟机热迁移和磁盘热迁移</p>
+<p><strong>选项 C：</strong> 虚拟机热迁移类型分为更改主机、更改数据存储以及更改主机和数据存储存储</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>热迁移仅可在存储虚拟化管理下的同一个存储设备内进行迁移</span></strong></p>
+<p><strong>解析：</strong> 存储热迁移将“运行中”的虚拟机的虚拟磁盘从一个数据存储迁移到另一个数据存储上，迁移过程中“业务不中断”（用户无感知）。</p>
+<p><strong>题目71：</strong> 、以下关于负载均衡特点的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 可管理性: 大量的管理工作都集中在应负较均衡技术的设备上，设备群或链路群只需要常规的配置和维护即可</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>透明性:对用户而言，集群等同于一个可靠性高、性能好的设备或链路，感知不到也不必关心具体的网络结构，减少设备或链路均会影响正常的业务</span></strong></p>
+<p><strong>选项 C：</strong> 高性能: 负载均衡技术将业务较均衡地分配到多台设备上，提搞了整个系统的性能</p>
+<p><strong>选项 D：</strong> 可靠性:单多个设备或链路发生故障也不会导致业务中断，提搞了整个系统的可靠性</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目72：</strong> 以下关于华为虚拟交换机描述正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 华为虚拟机交换机就是开源的Open vswitch</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>华为分布式交换机若有多个虚拟端口，每个端口都具有各自的属性</span></strong></p>
+<p><strong>选项 C：</strong> 华为虚拟交换机分为标准虚拟交换机和分布式虚拟交换机</p>
+<p><strong>选项 D：</strong> 智能网卡的虚拟交换功能也是由华为虚拟交换机提供的</p>
+<p><strong>解析：</strong> 虚拟交换机分两种类型，一种是普通虚拟交换机，一种是分布式虚拟交换机</p>
+<p><strong>题目73：</strong> 以下关于虚拟化技术的描述，正确的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 寄居虚拟化采用虚拟容器来监控虚拟机</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>分区、隔离、封装、独立都是虚拟化的特点</span></strong></p>
+<p><strong>选项 C：</strong> 裸金属虚拟化架构与寄居虚拟化将是未来虚拟化架构发展的趋势</p>
+<p><strong>选项 D：</strong> 虚拟化就是云计算</p>
+<p><strong>解析：</strong> 虚拟化技术是指通过软件或硬件等方式将物理资源（如服务器、存储设备等）划分为多个逻辑上独立的部分，并在每个逻辑部分中运行单独的操作系统和应用程序。对于给出的选项进行分析如下： A：寄居虚拟化通常是指在宿主操作系统中安装一个虚拟机监控程序来管理虚拟机，并非采用虚拟容器。 B：分区、隔离、封装以及独立都是虚拟化技术的特点，可以将物理资源按需进行划分和隔离，实现不同虚拟机之间的独立运行。 C：裸金属虚拟化架构与寄居虚拟化是两种不同的虚拟化形式，无法得出未来趋势的判定。 D：虚拟化和云计算是不同的概念，虚拟化旨在提高资源利用率和灵活性，而云计算是一种按需提供计算资源的模式。 综上所述，正确答案是B。</p>
+<p><strong>题目74：</strong> 以下哪一项不能被ibvirtd工具所管理</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> Xen</p>
+<p><strong>选项 B：</strong> Hyper-v</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>openstack</span></strong></p>
+<p><strong>选项 D：</strong> KVM</p>
+<p><strong>解析：</strong> ibvirtd是一种用于管理虚拟化的工具，可以用来管理不同类型的虚拟化平台和技术。根据题目给出的选项，需要选择一个不能被ibvirtd工具所管理的虚拟化平台。 A选项是Xen虚拟化平台，B选项是Hyper-v虚拟化平台，D选项是KVM虚拟化平台。这些都是常见的虚拟化平台，而且ibvirtd工具可以对它们进行管理。 C选项是OpenStack，要回答题目是否正确，需要知道OpenStack并不是一种虚拟化平台，而是一种云计算管理平台，用于部署和管理包括虚拟化在内的各种云服务。因此，本题目中所说的不能被ibvirtd工具所管理，选项C的OpenStack是正确的答案。</p>
+<p><strong>题目75：</strong> 以下关于KVM的描述，正确的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> KVM是一种硬件辅助虚拟化</p>
+<p><strong>选项 B：</strong> KVM是种闭源的虚拟化技术</p>
+<p><strong>选项 C：</strong> KVM是Linux上的一台虚拟机</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>KVM使用前后端架构实现虚拟化</span></strong></p>
+<p><strong>解析：</strong> kvm采用全虚拟化技术，搭配硬件辅助虚拟化的混合虚拟化架构</p>
+<p><strong>题目76：</strong> 以下关于二层交换机的描述，正确的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 任意时刻只能接收数据或者发送数据</p>
+<p><strong>选项 B：</strong> 每个接口都有唯一的MAC地址</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>支持基于MAC地址转发报文</span></strong></p>
+<p><strong>选项 D：</strong> 支持路由功能</p>
+<p><strong>解析：</strong> 二层交换机属数据链路层设备，可以识别数据包中的MAC地址信息，根据MAC地址进行转发，并将这些MAC地址与对应的端口记录在自己内部的一个地址表中，交换机才有唯一的MAC地址，三层交换机才是具有部分路由器功能的交换机，任意时刻都有收发数据的功能</p>
+<p><strong>题目77：</strong> 以下哪一项不属于FusionAccess Tindows Installer制作模板步骤中可选的功能项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 开启防火墙配置功能</p>
+<p><strong>选项 B：</strong> 安装个性化数据管理</p>
+<p><strong>选项 C：</strong> 开启第三方Gina认证</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>开启注销还原</span></strong></p>
+<p><strong>解析：</strong> • 选项D |错误|注销还原需要通过修改虚拟机操作系统的策略,转 化成关机来做间接支持。</p>
+<p><strong>题目78：</strong> 以下关于Ovs (Open vSwitch) 功能的描述，错误的是哪项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 划分局域网</p>
+<p><strong>选项 B：</strong> 搭建隧道</p>
+<p><strong>选项 C：</strong> 硬件监控</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>模拟路由</span></strong></p>
+<p><strong>解析：</strong> OVS是一个开源的虚拟网络交换层，可以用于虚拟机之间的数据交换，以及虚拟机和物理网络之间的数据交换。OVS支持虚拟局域网（VLAN）、隧道、硬件监控和网络地址转换（NAT）等功能。</p>
+<p><strong>题目79：</strong> 以下关于ovs(OpenvSwitch)的搭述,借误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>运行在虚拟化的服务器上，相比传统交换机具有更高的转发性能</span></strong></p>
+<p><strong>选项 B：</strong> 具备传统交换机实现的网络隔离和数居转发功能</p>
+<p><strong>选项 C：</strong> OVS是一个支持多层数居传发的高质量虚拟交换机</p>
+<p><strong>选项 D：</strong> 运行在虚拟化的服务器上,并提供远程管理</p>
+<p><strong>解析：</strong> OVS是一个支持多层数据转发的高质量虚拟交换机，主要部署在服务器上，相比传统交换机具有很好的编程扩展性，同时具备传统交换机实现的网络隔离和数据转发功能，运行在每个实现虚拟化的物理机器上，并提供远程管理</p>
+<p><strong>题目80：</strong> 以下关于NFS描述正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> NFS客户端不需要安装专门的软件</p>
+<p><strong>选项 B：</strong> NFS无法设置用户权限</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>NFS支持多用户访问</span></strong></p>
+<p><strong>选项 D：</strong> NFS属于有状态协议</p>
+<p><strong>解析：</strong> NFS是基于UDP/IP协议的应用，其实现主要是采用远程过程调用RPC机制，RPC提供了一组与机器、操作系统以及低层传送协议无关的存取远程文件的操作。需要客户端，支持多用户服务</p>
+<p><strong>题目81：</strong> 以下关于Linux网络设备的描述,正确的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> tap设备工作在三层</p>
+<p><strong>选项 B：</strong> tun设备工作在二层</p>
+<p><strong>选项 C：</strong> tun/tap不是通过用户空间程序发送数据包,而是将它们发送至物理介质</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>tun/tap是简单的点对点或以太网设备，不是从物理介质接收数据包,而是从用户空间程序接收</span></strong></p>
+<p><strong>解析：</strong> 这里正确答案应该是D，不过题库中选择的是B，这里答案保持题库原样</p>
+<p><strong>题目82：</strong> 以下关于Linux虚拟网络中namespace的描述错误的是哪项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 一个Host内可以创建多个namespace</p>
+<p><strong>选项 B：</strong> 一个设备只能位于一个namespace中</p>
+<p><strong>选项 C：</strong> 单纯从网络视角看,namespace可提供一份独立的网络协议栈</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>不同的namespace之间相互隔离,无法通信</span></strong></p>
+<p><strong>解析：</strong> Linux虚拟网络中的namespace可以创建一个主机内多个虚拟的网络环境，一个设备可以在不同的namespace中运行，可以提供独立的网络协议栈，因此不同的namespace之间相互隔离，但可以相互通信。选项D错误，因为它们是相互隔离的，因此不同namespace之间的通信是有条件的。</p>
+<p><strong>题目83：</strong> 以下关于KVM架构下内存虚拟化的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>为每个虚拟机维护一份内存影子页表</span></strong></p>
+<p><strong>选项 B：</strong> 能够使用大页内存</p>
+<p><strong>选项 C：</strong> 可以支持NUMA架构</p>
+<p><strong>选项 D：</strong> 内存上的数据可以被交换至内存交换分区</p>
+<p><strong>解析：</strong> 内存虚拟化分为全虚拟化（影子页表虚拟化）、半虚拟化、硬件辅助虚拟化</p>
+<p><strong>题目84：</strong> 以下关于IP路由的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 可以手工配置</p>
+<p><strong>选项 B：</strong> 包括接口名称</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>包括下一跳MAC地址</span></strong></p>
+<p><strong>选项 D：</strong> 可以动态生成</p>
+<p><strong>解析：</strong> IP路由可以通过动态生成或手工配置的方式进行配置，但下一跳MAC地址通常是由ARP协议自动生成的，而不是由IP路由配置的。因此，选项A是错误的描述。</p>
+<p><strong>题目85：</strong> 以下关于I/0虚拟化前后端模型的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 前端驱动通过VMM提供的接将数据转发到后端驱动</p>
+<p><strong>选项 B：</strong> 后端驱动能够与硬件进行交互，将VM的数据进行分时分通道进行处理</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>返回的I/o请求不会经过VMM处理，直接传递给前端驱动</span></strong></p>
+<p><strong>选项 D：</strong> VMM截获客户OS对网络的访问请求，然后通过软件的方式来模拟真实设备的效果</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目86：</strong> 以下关于FusionCompute虚拟机磁盘的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 创建的磁盘容量一样的前提下，创建普通类型的磁盘需要的时间一般会比创建精简类型的磁盘长</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>多台虚拟机使用同一个共享磁盘时,不需要应用软件对磁盘进行访问控制</span></strong></p>
+<p><strong>选项 C：</strong> 普通类型的磁盘根据磁盘容量为磁盘分配空间，精简类型的磁盘首次仅分配磁盘容量配置值的部分容量</p>
+<p><strong>选项 D：</strong> 普通磁盘只能绑定给单个虚拟机使用,共享磁盘可以绑定给多个虚拟机使用</p>
+<p><strong>解析：</strong> 多台虚拟机使用同一个共享磁盘时,需要应用软件对磁盘进行访问控制</p>
+<p><strong>题目87：</strong> 以下关于FusionCompute技术特点的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 支持多种硬件设备</p>
+<p><strong>选项 B：</strong> 采用多种安全措施，保证业务安全</p>
+<p><strong>选项 C：</strong> 具有完善的权限管理</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>采用虚拟化管理软件，支持除Linux外的所有操作系统</span></strong></p>
+<p><strong>解析：</strong> FusionCompute支持多种硬件设备，采用多种安全措施保证业务安全，具有完善的权限管理，这些都是它的技术特点。然而，它采用的是虚拟化管理软件，只支持Linux操作系统，而不是所有操作系统。因此，选项D是错误的。</p>
+<p><strong>题目88：</strong> 以下关于FusionCompute分布式虚拟交换机端口组的描述,错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 连接在同一端口组的虚拟机网卡,具有相同的网络属性</p>
+<p><strong>选项 B：</strong> 端口组是一种策略设置机制,这些策略用于管理与端口组相连的网络一个分布式交换机</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>每个计算节点只能创建一个端口组</span></strong></p>
+<p><strong>选项 D：</strong> 端口组支持配置IP与MAC定,提升安全性</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目89：</strong> 以下关于FusionCompute端口组的描述,错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 可配置IP与MAC地址绑定</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>可配置路由</span></strong></p>
+<p><strong>选项 C：</strong> 可配置发送突发流量大小</p>
+<p><strong>选项 D：</strong> 可配置广播抑制</p>
+<p><strong>解析：</strong> FusionCompute端口组是华为OceanStor解决方案中的网络组件，用于管理服务器和存储设备的网络连接。A、C、D选项正确，B选项错误。因此，正确答案是B。</p>
+<p><strong>题目90：</strong> 以下创建虚拟机模板方式不正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 模板克隆为模板</p>
+<p><strong>选项 B：</strong> 虚拟机克隆为模板</p>
+<p><strong>选项 C：</strong> 虚拟机转为模板</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>快照转为模板</span></strong></p>
+<p><strong>解析：</strong> 虚拟机转为模板：将虚拟机直接转换为模板，所有参数均使用该虚拟机当前设置。转换后，该虚拟机不再存在。虚拟机克隆为模板：复制虚拟机为模板并可调整部分参数设置，使其与虚拟机稍有不同。克隆完成后，该虚拟机仍可正常使用。模板克隆为模板：复制模板为新模板并可调整部分参数设置，使其与原模板稍有不同。克隆完成后，原模板仍存在。导入模板：将本地的虚拟机模板文件导入；快照不能转为模板</p>
+<p><strong>题目91：</strong> 下面不属于快照管理的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>复制快照</span></strong></p>
+<p><strong>选项 B：</strong> 修改快照</p>
+<p><strong>选项 C：</strong> 创建快照</p>
+<p><strong>选项 D：</strong> 删除快照</p>
+<p><strong>解析：</strong> 虚拟机快照功能概述；快照是相当于虚拟机备份，当我们在虚拟机上做某些测试失败时，可以迅速地还原当初的状态，便于重新实验测试。可以创建，修改删除快照但是不可以复制快照</p>
+<p><strong>题目92：</strong> 以下不适合提高内存复用比的场景是 0</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 在保证性能的同时，客户要求单台主机部署最大数量的虚拟机</p>
+<p><strong>选项 B：</strong> 虚拟机内存利用率较低</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>商用场景下内存复用率已经达到150%</span></strong></p>
+<p><strong>选项 D：</strong> 降低客户硬件采购成本</p>
+<p><strong>解析：</strong> 商用场景业务很大，业务繁忙，内存复用率达不到150%</p>
+<p><strong>题目93：</strong> 以下关于虚拟机热迁移所使用技术的描述正确的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>迭代迁移</span></strong></p>
+<p><strong>选项 B：</strong> 顺向迁移</p>
+<p><strong>选项 C：</strong> 内存共享</p>
+<p><strong>选项 D：</strong> mirror双写</p>
+<p><strong>解析：</strong> 虚拟机热迁移是指在虚拟机运行过程中，将其从一台物理服务器迁移到另一台物理服务器的一种技术。根据题目所给选项，选项A“迭代迁移”是正确的描述。其他选项与虚拟机热迁移技术没有直接关系。</p>
+<p><strong>题目94：</strong> 以下关于虚拟机快照的描述错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 虚拟机快照可迅速生成,并可用作传统备份和归档的数据源,缩小甚至消除了数据备份的窗口</p>
+<p><strong>选项 B：</strong> 虚拟机快照存储在磁盘上,可以快速直接存取,提高了数据恢复的速度</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>虚拟机快照是对虚拟机的完整备份,若磁盘现故障,可使用快照进行数据恢复</span></strong></p>
+<p><strong>选项 D：</strong> 虚拟机快照一般应用在当对虚拟机进行升级、打补丁、测试等破坏性试验前，一旦虚拟机现了故障，使用快照可以对虚拟机进行迅速恢复</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目95：</strong> 以下关于虚拟机磁盘的描述,正确的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 磁盘创建来之后可以与任意虚拟机绑定使用,实现虚拟机间数据的快速转移</p>
+<p><strong>选项 B：</strong> 如果使用非虚拟化存储,每个磁盘文件对应一个共享目录</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>磁盘为虚拟机提供数据存储空间,它依赖于虚拟机的生命周期而存在</span></strong></p>
+<p><strong>选项 D：</strong> 如果使用虚拟化存储,每个磁盘文件对于一个LUN</p>
+<p><strong>解析：</strong> </p>
+<p><strong>题目96：</strong> 以下关于虚拟化存储和非虚拟化存储描述正确的是</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 虚拟化存储的安全性比非虚拟化存储高</p>
+<p><strong>选项 B：</strong> 虚拟化存储的兼容性比非虚拟化存储好</p>
+<p><strong>选项 C：</strong> <strong><span style='color:red'>非虚拟化存储的读写性能比虚拟化存储好</span></strong></p>
+<p><strong>选项 D：</strong> 非虚拟化存储的扩展性比虚拟化存储好</p>
+<p><strong>解析：</strong> 非虚拟化存储一般是裸设备映射少了一层映射所以读写性能比虚拟化存储好。</p>
+<p><strong>题目97：</strong> 以下关于虚拟化存储ThickLUN使用场景的描述,错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 存储空间利用率不太敏感的场景</p>
+<p><strong>选项 B：</strong> 成本要求不太高的场景</p>
+<p><strong>选项 C：</strong> 性能要求较高的场景</p>
+<p><strong>选项 D：</strong> <strong><span style='color:red'>在实际应用中很难预估存储空间的场景</span></strong></p>
+<p><strong>解析：</strong> Thick LUN是“传统非精简LUN”，是一种LUN的类型，支持虚拟资源分配，能够以较简便的方式进行创建、扩容和压缩操作。Thick LUN在创建完成后就会从存储池中分配满额的存储空间，即LUN的大小完全等于分配的空间。因此它拥有较高的和可预测的性能。成本要求较高</p>
+<p><strong>题目98：</strong> 以下关于路由器的描述,错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>路由器可以实现业务数据实时路径优化</span></strong></p>
+<p><strong>选项 B：</strong> 在网络通信中,路由器具有判断网络地址以及选择IP路径的作用</p>
+<p><strong>选项 C：</strong> 路由器是连接两个或多个网络的硬件设备</p>
+<p><strong>选项 D：</strong> 路由器对不同的网络之间的数据包进行存储、分组转发处理</p>
+<p><strong>解析：</strong> 路由器不可以实现业务数据实时路径优化，需要管理员配置路由和优先级大小才能变化路径</p>
+<p><strong>题目99：</strong> 以下关于集群IMC策略的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>集群下新加入的虚拟机CPU功能集必须高于设置的目标基准功能集</span></strong></p>
+<p><strong>选项 B：</strong> 集群下运行或休眠状态的虚拟机CPU功能集必须等于或低于目标基准功能集</p>
+<p><strong>选项 C：</strong> 目前IMC策略仅支持Intel不同型号CPU的热迁移</p>
+<p><strong>选项 D：</strong> 集群下主机的CPU功能集必须等于或高于设置的目标基准功能集</p>
+<p><strong>解析：</strong> 关于集群MC策略的描述，错误的是集群下新加入的虚拟机CPU功能集必须高于设置的目标基准功能集。 答案：A 解释： A. 错误。集群下新加入的虚拟机CPU功能集不需要高于设置的目标基准功能集，只要符合目标基准功能集要求即可。 B. 正确。集群下运行或休眠状态的虚拟机CPU功能集必须等于或低于目标基准功能集，以确保虚拟机的正常运行和兼容性。 C. 正确。目前IMC策略仅支持不同型号CPU的热迁移，以避免数据损坏和应用程序崩溃。 D. 正确。集群下主机的CPU功能集必须等于或高于设置的目标基准功能集，以确保主机能够支持虚拟机的正常运行和操作需求。</p>
+<p><strong>题目100：</strong> 以下关于固态硬盘相较于普通机械硬盘优点的描述,错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> <strong><span style='color:red'>价格低</span></strong></p>
+<p><strong>选项 B：</strong> 读取数据时延小</p>
+<p><strong>选项 C：</strong> 启动快</p>
+<p><strong>选项 D：</strong> 功耗低</p>
+<p><strong>解析：</strong> 相同容量的机械硬盘，价格远远低于固态硬盘</p>
+<p><strong>题目101：</strong> 以下关于分布式存储和多副本机制的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 使用服务器部署分布式存储能拥有大容量的分布式Cache</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>系统会将多个数据副本保存在相同服务器上，同时保证数据的强一致性</span></strong></p>
+<p><strong>选项 C：</strong> 使用数据分片的保存方式可以避免局部热点，提高读写速率</p>
+<p><strong>选项 D：</strong> 数据多副本保存对于存储空间需求较高，部署价格更高</p>
+<p><strong>解析：</strong> 系统会将多个数据副本保存在不同服务器上</p>
+<p><strong>题目102：</strong> 以下关于动态资源调度的描述，错误的是哪一项?</p>
+<p><strong>类型：</strong> 单选题</p>
+<p><strong>选项 A：</strong> 集群的自动化方式有两种,自动调度模式和管理员手动操作模式</p>
+<p><strong>选项 B：</strong> <strong><span style='color:red'>当两台虚拟机是主备关系时，可以为其配置资源调度的高级规则聚集策略，使其运行在不同的主机上以提高可靠性</span></strong></p>
+<p><strong>选项 C：</strong> 集群动态资源调度功能，采用智能负载均衡调度算法，周期性检查集群内主机的负载情况，在不同的主机之间迁移虚拟机，从而达到集群内的主机之间负载均衡目的</p>
+<p><strong>选项 D：</strong> 资源调度可以配置不同的衡量因素,可以根据CPU、内存或CPu和内存进行调度</p>
+<p><strong>解析：</strong> 当两台虚拟机是主备关系时,不建议为其配置资源调度的高级规则。通常情况下,动态资源调度适用于运行在不同的主机上以提高可靠性的主备关系,即确保两个同等重要或互补的角色能够在不同的节点上运行。如果虚拟机同时部署在同一台主机上,但采用主备模式运行,而未经过资源的隔离和管理,确实可能会导致因系统压力波动造成资源的重复消耗或者响应缓慢的情况。所以B选项描述错误。</p>
