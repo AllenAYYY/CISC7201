@@ -5,7 +5,7 @@
 @Modify Time : 2023/11/17 16:37 
 @Author  :  Allen.Yang  
 @Contact :   MC36514@um.edu.mo        
-@Description  :
+@Description  : 爬取考试宝中题库中的题
 
 """
 
@@ -20,10 +20,14 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver import ActionChains
 
-#driver路径
+# 指定driver路径
 webdriver_path = "C:\Program Files\Google\Chrome\Application\chromedriver.exe"
 
+# 登陆网址
 url = "https://www.zaixiankaoshi.com/login/"
+
+# 构建webDriver对象，主要目的是添加一系列参数来绕过Chrome的自动检测
+# 具体添加的参数不固定，根绝情况来添加，但一般按照我这种添加方式都可以
 def diriver_build():
 
     #添加部分参数以绕过google自动检测
@@ -42,19 +46,25 @@ def diriver_build():
     options.add_argument("window-size=1280,800")
     options.add_experimental_option("detach", True)
 
-    #采用service的方式构建driver
+    # 采用service的方式构建driver
+    # Service是WebDriver的一个组件，负责启动和管理浏览器驱动程序的进程。
+    #
     service = Service(webdriver_path)
     driver = webdriver.Chrome(service=service, options=options)
+    # get方法访问url网址
     driver.get(url)
+    # 最大化窗口
     driver.maximize_window()
     return driver
+
 # 打开考试宝网站
-
-
 driver = diriver_build()
 # 登录账号
-driver.find_element(By.XPATH, "/html/body/div[3]/div/div/section/div[2]/div/div[2]/form/div/div[1]/div/div/div/input").send_keys("yourid")
-driver.find_element(By.XPATH, "/html/body/div[3]/div/div/section/div[2]/div/div[2]/form/div/div[2]/div/div/div/input").send_keys("yourpsd")
+# 分别找到用户名的输入框、密码输入框和登录按钮
+# 向表单中添加信息一般用send_keys()
+# 点击按钮一般是click()
+driver.find_element(By.XPATH, "/html/body/div[3]/div/div/section/div[2]/div/div[2]/form/div/div[1]/div/div/div/input").send_keys("xx")
+driver.find_element(By.XPATH, "/html/body/div[3]/div/div/section/div[2]/div/div[2]/form/div/div[2]/div/div/div/input").send_keys("xx")
 driver.find_element(By.XPATH, "/html/body/div[3]/div/div/section/div[2]/div/div[2]/form/div/div[3]/button").click()
 time.sleep(1)
 
@@ -65,10 +75,11 @@ sequence = 0
 # 构造题目页面的URL
 url = "https://www.zaixiankaoshi.com/online/?paperId=" + str(paperId) + "&practice=&modal=1&is_recite=&qtype=&text=%E9%A1%BA%E5%BA%8F%E7%BB%83%E4%B9%A0&sequence=" + str(sequence) + "&is_collect=0"
 
-# 在新窗口中打开题目页面
+# 在新窗口中打开题目页面(打开新的URL)
 js = "window.open('" + url + "');"
 driver.execute_script(js)
-new_window = driver.window_handles[-1]
+new_window = driver.window_handles[-1]   # 可能会有多个窗口弹出的情况，选择最后一个窗口的句柄
+# 跳转到最后一个窗口
 driver.switch_to.window(new_window)
 
 #https://www.zaixiankaoshi.com/online/?paperId=12319433&practice=&modal=1&is_recite=&qtype=&text=%E9%A1%BA%E5%BA%8F%E7%BB%83%E4%B9%A0&sequence=0&is_collect=0
@@ -83,9 +94,12 @@ x = 0
 # 使用JavaScript来更改复选框的状态//*[@id="body"]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div[2]/div
 #driver.execute_script("arguments[0].click();", checkbox)
 #time.sleep(3)
+# 打开背题模式，这样可在网页上直接看到正确答案是什么
 checkbox = driver.find_element(By.XPATH,'//*[@id="body"]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/p[2]/span[2]/div/input')
 
 # 使用ActionChains模拟鼠标点击操作
+# 先移动到对应的元素位置，再点击元素（按钮）
+# perform是执行之前的一切操作，执行到perform的时候才会在页面进行鼠标移动、点击按钮这些动作
 actions = ActionChains(driver)
 actions.move_to_element(checkbox).click().perform()
 time.sleep(7)
@@ -103,7 +117,9 @@ while True:
             correct_options.append(option.text)"""
     type = driver.find_element(By.XPATH, "//*[@id='body']/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div[1]/div/span[1]").text
     question = driver.find_element(By.XPATH, "//*[@id='body']/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div[1]/div/div").text
+    next = driver.find_element(By.ID,"xx")
     #options = driver.find_element(By.XPATH, "/html/body/div[3]/div/div/section/div[2]/div[1]/div[2]/div[1]/div[1]/div/div[2]/div").find_elements(By.CLASS_NAME, "option")
+    # 不一定有解析，没解析的时候找不到元素会抛出异常，用try-except捕捉并进行相应的操作
     try:
         explain = driver.find_element(By.CLASS_NAME, "answer-analysis").text
     except:
